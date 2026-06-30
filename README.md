@@ -1,8 +1,8 @@
 # Promptary Examples
 
-**50+ production-ready AI prompt examples** organized by framework — ready to copy, adapt, and save to [Promptary](https://promptary.dev) for use via REST API.
+**70+ production-ready AI prompt examples** organized by framework — ready to copy, adapt, and save to [Promptary](https://promptary.dev) for use via REST API.
 
-Every example in this repo was built using one of the 13 prompt engineering frameworks supported by [Promptary](https://promptary.dev). Each prompt can be saved to Promptary and called from any application via a stable GET endpoint — no hardcoding, no redeployment when you update the wording.
+Every example in this repo was built using one of the 20 prompt engineering frameworks supported by [Promptary](https://promptary.dev). Each prompt can be saved to Promptary and called from any application via a stable GET endpoint — no hardcoding, no redeployment when you update the wording.
 
 ```
 GET https://promptary.dev/api/v1/prompts/:id
@@ -13,9 +13,9 @@ Authorization: Bearer pk_live_YOUR_KEY
 
 ## What is Promptary?
 
-[Promptary](https://promptary.dev) is a prompt engineering workspace where you write structured AI prompts using 13 proven frameworks, organize them on a physics-driven canvas, and serve them to any app via a stable REST API.
+[Promptary](https://promptary.dev) is a prompt engineering workspace where you write structured AI prompts using 20 proven frameworks, organize them on a physics-driven canvas, and serve them to any app via a stable REST API.
 
-- **Free forever** on the Personal plan — unlimited prompts, all 13 frameworks, full canvas
+- **Free forever** on the Personal plan — unlimited prompts, all 20 frameworks, full canvas
 - **Developer plan** (€9/month) — unlocks the REST API endpoint for every prompt
 - **Team plan** (€125/month, 5 seats) — shared workspace, prompt version history, 10 API keys
 
@@ -40,13 +40,20 @@ Authorization: Bearer pk_live_YOUR_KEY
 | [Image Gen](./image-gen/) | Subject, Style, Lighting, Composition, Mood, Negative, Parameters | Midjourney, DALL·E, Flux, Stable Diffusion | 4 examples |
 | [Video Gen](./video-gen/) | Scene, Motion, Camera, Lighting, Style, Duration, Negative, Parameters | Sora, Runway, Pika, Kling | 3 examples |
 | [Freeform](./freeform/) | Text | Existing prompts, system prompts, agent instructions | 3 examples |
+| [Chain-of-Thought](./cot/) | Role, Task, Think step by step, Output format | Reasoning, math, logic, multi-step analysis | 3 examples |
+| [Few-Shot](./fewshot/) | Task, Example 1–3, Output format | Classification, extraction, formatting | 3 examples |
+| [Skeleton-of-Thought](./skeleton/) | Topic, Skeleton points, Expand instructions, Output format | Long-form content, documentation, reports | 3 examples |
+| [Tree-of-Thought](./tot/) | Problem, Branches, Evaluation criteria, Selection | Decisions, strategy, complex problem-solving | 3 examples |
+| [Plan-and-Solve](./plansolve/) | Task, Plan instructions, Solve instructions, Output format | Structured analysis, research, debugging | 3 examples |
+| [Self-Refine](./selfrefine/) | Role, Task, Criteria | High-quality writing, docs, code review | 3 examples |
+| [PARA](./para/) | Problem, Approach, Result, Application | Technical writing, case studies, blog posts | 3 examples |
 
 ---
 
 ## How to use these examples
 
 ### Option 1 — Copy and paste directly into ChatGPT, Claude, or Gemini
-Each example includes the assembled prompt text at the bottom. Copy it and use it immediately.
+Each example includes the assembled prompt text in the **Assembled Prompt** section. Copy it and use it immediately.
 
 ### Option 2 — Save to Promptary and call via REST API
 1. Sign up free at [promptary.dev](https://promptary.dev/register)
@@ -79,33 +86,6 @@ prompt_text = res.json()['text']
 
 ---
 
-## Example file format
-
-Each example file follows this structure:
-
-```markdown
-# [Title]
-
-## Framework: [FRAMEWORK NAME]
-
-## Fields
-
-**Role:** ...
-**Action:** ...
-**Context:** ...
-**Expectation:** ...
-
-## Assembled Prompt
-
-[The complete prompt text, ready to copy]
-
-## Use in Promptary
-
-[Link to the framework guide on promptary.dev]
-```
-
----
-
 ## Contributing
 
 Found a framework combination that works exceptionally well? Open a PR. Guidelines:
@@ -122,6 +102,7 @@ Found a framework combination that works exceptionally well? Open a PR. Guidelin
 - [API Documentation](https://promptary.dev/docs/) — REST API reference
 - [Framework Guides](https://promptary.dev/frameworks/) — detailed guide for each framework
 - [Pricing](https://promptary.dev/pricing/) — free and paid plans
+- [Blog](https://promptary.dev/blog/) — prompt engineering tips and tutorials
 
 ---
 
