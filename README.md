@@ -23,6 +23,16 @@ Authorization: Bearer pk_live_YOUR_KEY
 
 ---
 
+## Why use prompt frameworks?
+
+Unstructured prompts — a single paragraph of instructions pasted into a chat window — produce inconsistent results because they leave too much to interpretation. A prompt framework solves this by breaking the instruction into named components, each responsible for one dimension of the task: who the AI should be, what it should do, what context it needs, and what good output looks like.
+
+The practical difference is significant. A RACE prompt that explicitly defines Role, Action, Context, and Expectation produces more reliable output than an equivalent unstructured prompt because the model receives complete, unambiguous information in a predictable structure. The same logic applies to Chain-of-Thought (show your reasoning before concluding), Few-Shot (learn the pattern from examples), Tree-of-Thought (explore multiple paths before committing), and Self-Refine (draft, critique, then improve).
+
+Frameworks also make prompts maintainable. When a prompt is structured into fields, you can change the Tone without touching the Role, or update the Output format without rewriting the Context. Saved in Promptary, each field is editable independently — and the assembled prompt is always one API call away.
+
+--- 
+
 ## Frameworks
 
 | Framework | Fields | Best for | Examples |
